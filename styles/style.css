@@ -120,6 +120,53 @@ a {
     margin-bottom: 5rem;
 }
 
+/* Box */
+
+.window__container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40rem;
+    height: 40rem;
+    background-color: transparent;
+}
+
+.window__cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 45%;
+    background-color: white;
+    border: 5px solid white;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+}
+
+.window__cube:hover {
+    background-color: transparent;
+}
+
+.window__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 45%;
+    background-color: transparent;
+    border: 5px solid white;
+    cursor: pointer;
+    transition: background-color .5s ease-in-out;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.window__cube:hover .window__link {
+    opacity: 1;
+}
+
 /* Info */
 
 .info {
