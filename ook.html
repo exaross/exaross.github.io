@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <title>Works for OOK</title>
+
+</head>
+<body class="container">
+
+    <div id="page-container">
+
+        <div id="content-wrap">
+            <header class="header">
+                <nav class="header-nav">
+                    <a href="index.html" class="header-nav__logo">Alexandr Grosu</a>
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item">
+                            <a href="projects.html" class="header-nav__link active">Projects</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="resume.html" class="header-nav__link">Resume</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main class="main main-ook">
+
+                <section class="video">  
+                    <h2 class="video__heading">
+                        Video:
+                    </h2>
+                        <video width="80%" src="/video/OOK.mp4" type="video/mp4" controls poster="/img/works/ook.png"></video> 
+                            <div>
+                                <a class="video__link" target="_blank" href="https://bit.ly/OOK_YT">
+                                Watch on YouTube
+                                </a>
+                            </div>
+                </section>
+
+                <h2 class="image__heading">
+                    Images and GIF's:
+                </h2>
+                <section class="images">
+                    <div class="image__item">
+                        <a href="img/ook/Chinese_New_Year.png" class="image__link" target="_blank">
+                            <img src="img/ook/Chinese_New_Year.png" alt="mci" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Chocolate_Day.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Chocolate_Day.png" alt="mci" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Coffee_Good_Morning.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Coffee_Good_Morning.png" alt="Coffee good morning" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Good_morning.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Good_morning.png" alt="Good morning" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Good_Night.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Good_Night.png" alt="Good night" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Groundhog.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Groundhog.png" alt="Groundhog" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Rainy_Evening.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Rainy_Evening.png" alt="rainy evening" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/Rose.gif" class="image__link" target="_blank">
+                            <img src="img/ook/Rose.png" alt="rose" class="image__image">
+                        </a>
+                    </div>
+                    <div class="image__item">
+                        <a href="img/ook/TheOwl.gif" class="image__link" target="_blank">
+                            <img src="img/ook/TheOwl.png" alt="the owl" class="image__image">
+                        </a>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <footer class="footer">
+            <nav class="footer-nav">
+                <div class="footer-nav__logo">
+                    <a href="#page-container" class="footer-nav__link">X</a>
+                </div>
+                <p class="footer-nav__copyright">© 2022 | All rights reserved</p>
+                <a href="mailto:alxndr.grs@gmail.com" class="footer-nav__email">alxndr.grs@gmail.com</a>
+            </nav>
+        </footer>
+
+    </div>
+
+    <script>
+        $(".image__image").mouseover(function(){
+            let path = this.src;
+            if (path.includes('png')){
+                let npath = path.replace('png','gif');
+                this.src=npath;
+            }
+        })
+        $(".image__image").mouseout(function(){
+            let path = this.src;
+            if (path.includes('gif')){
+                let npath = path.replace('gif','png');
+                this.src=npath;
+            }
+        })
+    </script>
+    
+</body>
+</html>
