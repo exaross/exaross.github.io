@@ -89,6 +89,8 @@ a {
 
 .header-nav__list {
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .header-nav__item:not(:first-child) {
@@ -129,6 +131,7 @@ a {
 /* Main */
 
 .main {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,8 +197,9 @@ a {
 }
 
 .info__img {
-    width: 30rem;
+    width: 35rem;
     object-fit: cover;
+    border-radius: 50%;
 /*     border: .1rem solid rgba(255, 255, 255 ,0.4);
     background: linear-gradient(0deg, rgba(255, 255, 255, .6), rgba(0, 0, 0, .8)) ; */
 }
@@ -695,19 +699,308 @@ a {
     opacity: 0.8;
 }
 
-/* Responsive */
+/* Carousel */
 
-@media (max-width: 1200px) {
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .works__item {
-        width: 100%;
+.carousel__container {
+    position: relative;
+    width: 180rem;
+    height: 40rem;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin: 0;
+    overflow: hidden;
+}
+
+.carousel__arrow {
+    position: absolute;
+    top: calc(50% - 1rem);
+    padding: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: var(--white);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 1rem;
+    background-image: url(/img/icons/left.png);
+}
+
+.arrow-right {
+    right: 1rem;
+    background-image: url(/img/icons/right.png);
+}
+
+.carousel__list {
+    position: absolute;
+    top: calc(50% - 15rem);
+    padding: 0;
+    margin: 0;
+    margin-left: 10rem;
+    width: 1200rem;
+}
+
+.carousel__item {
+    display: inline-block;
+    width: 50rem;
+    height: 30rem;
+    margin: 0;
+    margin-right: 5rem;
+    background-color: aquamarine;
+}
+
+.carousel__item:nth-child(3n) {
+    margin-right: 10rem;
+}
+
+.carousel__image {
+    display: block;
+}
+
+/* Menu */
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 40rem;
+    width: 40rem;
+    gap: 1rem;
+    border: 1px solid;
+}
+
+.item {
+    width: 48%;
+    flex: 1 1 48%;
+    background-color: green;
+}
+
+/* Responsive Design */
+/* < 425px */
+
+@media (max-width: 449px) {
+
+    /* Header */
+
+    .header-nav, .header-nav__list {
+        flex-direction: column;
     }
 
-    .arts__item {
+    .header-nav__item:not(:first-child) {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Homepage */
+
+    .info {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .info__circle {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .info__img {
+        width: 15rem;
+    }
+
+    .info__paragraph:nth-child(1) {
+        font-size: .7rem;
+    }
+
+    .info__paragraph {
+        font-size: .5rem;
+    }
+
+    .header-nav__link, .header-nav__logo {
+        font-size: 1rem;
+    }
+
+    /* Projects */
+
+    .projects {
         width: 100%;
     }
 
     .projects__item {
+        width: 100%;
+        height: 10rem;
+    }
+
+    .projects__link {
+        width: 100%;
+        height: 10rem;
+    }
+    
+    .projects__heading {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav__logo {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-nav__copyright {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .footer-nav__email {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (min-width: 450px) and (max-width: 679px) {
+
+        /* Info */
+
+        .info {
+            width: 40rem;
+            height: 40rem;
+        }
+    
+        .info__circle {
+            width: 40rem;
+            height: 40rem;
+        }
+    
+        .info__img {
+            width: 20rem;
+        }
+    
+        .info__paragraph:nth-child(1) {
+            font-size: .9rem;
+        }
+    
+        .info__paragraph {
+            font-size: .8rem;
+        }
+    
+        .header-nav__link, .header-nav__logo {
+            font-size: 1rem;
+        }
+
+        /* Main */
+
+        .main {
+            height: 90vh;
+        }
+
+        /* Projects */
+
+        .projects {
+            width: 90%;
+        }
+
+        .projects__item {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        .projects__link {
+            height: 15rem;
+        }
+
+        /* Footer */
+
+    
+        .footer-nav__copyright {
+            font-size: .9rem;
+            margin-left: 6rem;
+        }
+    
+        .footer-nav__email {
+            font-size: .9rem;
+        }
+}
+
+@media (min-width: 680px) and (max-width: 979px) {
+
+            /* Info */
+
+            .info {
+                width: 45rem;
+                height: 45rem;
+            }
+        
+            .info__circle {
+                width: 40rem;
+                height: 40rem;
+            }
+        
+            .info__img {
+                width: 20rem;
+            }
+        
+            .info__paragraph:nth-child(1) {
+                font-size: .9rem;
+            }
+        
+            .info__paragraph {
+                font-size: .8rem;
+            }
+        
+            .header-nav__link, .header-nav__logo {
+                font-size: 1rem;
+            }
+
+        /* Projects */
+
+        .projects {
+            width: 100%;
+        }
+    
+        .projects__item {
+            width: 25rem;
+            height: 25rem;
+        }
+    
+        .projects__link {
+            width: 25rem;
+            height: 25rem;
+        }
+        
+        .projects__heading {
+            font-size: 2.5rem;
+        }
+}
+
+@media (min-width: 980px) and (max-width: 1300px)  {
+
+    /* Arts */
+
+    .arts__item {
         width: 100%;
     }
 
@@ -715,4 +1008,25 @@ a {
         width: 70%;
     }
 
+    /* Projects */
+
+    .projects {
+        width: 100%;
+    }
+
+    .projects__heading {
+        font-size: 3rem;
+    }
+
+    .projects__item {
+        width: 35rem;
+        height: 35rem;
+    }
+
+}
+
+@media (min-width: 1301px) {
+    .projects {
+        width: 70%;
+    }
 }
