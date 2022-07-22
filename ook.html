@@ -49,7 +49,44 @@
                 <h2 class="image__heading">
                     Images and GIF's:
                 </h2>
-                <section class="images">
+
+                <div class="carousel">
+                    <div class="carousel__container">
+                        <div class="carousel__arrow arrow-left" id="arrow-left">&lt;</div>
+                        <div class="carousel__arrow arrow-right" id="arrow-right">&gt;</div>
+                        <ul class="carousel__list" id="carousel__list">
+                            <li class="carousel__item">
+            
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                            <li class="carousel__item">
+                                <img src="" alt="" class="carousel__image">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <section class="images">
                     <div class="image__item">
                         <a href="img/ook/Chinese_New_Year.png" class="image__link" target="_blank">
                             <img src="img/ook/Chinese_New_Year.png" alt="mci" class="image__image">
@@ -95,7 +132,7 @@
                             <img src="img/ook/TheOwl.png" alt="the owl" class="image__image">
                         </a>
                     </div>
-                </section>
+                </section> -->
 
             </main>
         </div>
@@ -106,28 +143,13 @@
                     <a href="#page-container" class="footer-nav__link">X</a>
                 </div>
                 <p class="footer-nav__copyright">© 2022 | All rights reserved</p>
-                <a href="mailto:alxndr.grs@gmail.com" class="footer-nav__email">alxndr.grs@gmail.com</a>
             </nav>
         </footer>
 
     </div>
 
-    <script>
-        $(".image__image").mouseover(function(){
-            let path = this.src;
-            if (path.includes('png')){
-                let npath = path.replace('png','gif');
-                this.src=npath;
-            }
-        })
-        $(".image__image").mouseout(function(){
-            let path = this.src;
-            if (path.includes('gif')){
-                let npath = path.replace('gif','png');
-                this.src=npath;
-            }
-        })
-    </script>
+    <script src="/js/ook.js"></script>
+    <script src="/js/carousel.js"></script>
     
 </body>
 </html>
