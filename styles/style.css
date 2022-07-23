@@ -392,6 +392,10 @@ a {
     opacity: 1;
 }
 
+.about {
+    opacity: 1;
+}
+
 /* Arts */
 
 .arts {
@@ -758,9 +762,10 @@ a {
     position: relative;
     width: 180rem;
     height: 40rem;
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 5rem;
     margin: 0;
-/*     overflow: hidden; */
+    overflow: hidden;
 }
 
 .carousel__arrow {
@@ -798,9 +803,8 @@ a {
     top: calc(50% - 15rem);
     padding: 0;
     margin: 0;
-    margin-left: 10rem;
     width: 1200rem;
-    transition: transform .5s ease-in-out;
+    transition: margin-left .5s ease-in-out;
 }
 
 .carousel__item {
@@ -810,7 +814,7 @@ a {
     margin: 0;
     margin-right: 5rem;
     border: 1px solid rgba(255, 255, 255, 0);
-    border-radius: 1rem;
+    border-radius: 2rem;
     background-color: transparent;
     cursor: pointer;
     opacity: 0.7;
@@ -832,7 +836,7 @@ a {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 #carousel-upscale__cover {
@@ -1185,4 +1189,10 @@ a {
                 background-size: contain;
             }
 
+}
+
+@media (min-width: 1441px) {
+    .link-ook::before {
+        background-size: contain;
+    }
 }

@@ -23,27 +23,63 @@ arright.addEventListener("click", function() {
 /* New Carousel */
 /* Carousel Animation */
 
-let width = 50;
+let width = 500;
 let count = 3;
+let space = 207;
 let position = 0;
 
 let arrleft = document.getElementById('arrow-left');
 let arright = document.getElementById('arrow-right');
 let list = document.getElementById('carousel__list');
 
-arrleft.addEventListener("click", function() {
-    console.log('[left] it works');
+list.style.marginLeft = "0";
+list.style.transform = 'translateX(100px)';
+console.log(list.style.marginLeft);
 
-    position = width * count;
-    position = Math.min(position, 0);
-    list.style.marginLeft = position + 'rem';
+arrleft.addEventListener("click", function() {
+
+    position += (width * count) + space;
+
+    console.log(position);
+    console.log(list.style.marginLeft);
+
+    list.style.marginLeft = position + "px";
+
+
+    /* Check and On/Off buttons */
+    
+    if(list.style.marginLeft >= '0') {
+        arrleft.style.visibility = "hidden";
+    }
+
+    if (list.style.marginLeft <= '-3400') {
+        arright.style.visibility = "visible";
+    }
+
 
 })
 
 arright.addEventListener("click", function() {
-    console.log('[right] it works');
-    list.style.transform += 'translateX(-171rem)';
+
+    console.log(list.style.marginLeft);
+
+    position -= (width * count) + space;
+
+    list.style.marginLeft = position + "px";
+
     arrleft.style.visibility = "visible";
+
+    
+    /* Check and On/Off buttons */
+
+    if (list.style.marginLeft <= '-1707') {
+        arrleft.style.visibility = "visible";
+    }
+
+    if (list.style.marginLeft >= '-3400') {
+        arright.style.visibility = "hidden";
+    }
+
 })
 
 
