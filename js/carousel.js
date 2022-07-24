@@ -21,19 +21,32 @@ arright.addEventListener("click", function() {
 }) */
 
 /* New Carousel */
-/* Carousel Animation */
 
-let width = 500;
-let count = 3;
-let space = 207;
-let position = 0;
 
 let arrleft = document.getElementById('arrow-left');
 let arright = document.getElementById('arrow-right');
 let list = document.getElementById('carousel__list');
 
+
+/* Variables for Adaptive */
+
+let carouselContainer = document.querySelector('.carousel__container');
+let carouselContainerWidth = carouselContainer.offsetWidth;
+let carouselContainerHeight = carouselContainer.offsetHeight;
+let carouselItem = document.querySelector('.carousel__item');
+let carouselItemWidth = carouselItem.offsetWidth;
+let carouselItemHeight = carouselItem.offsetHeight;
+let carouselItems = document.querySelectorAll('.carousel__item');
+
+let width = carouselItemWidth;
+let count = 3;
+let space = 207;
+let position = 0;
+
+
+
 list.style.marginLeft = "0";
-list.style.transform = 'translateX(100px)';
+/* list.style.transform = 'translateX(100px)'; */
 console.log(list.style.marginLeft);
 
 arrleft.addEventListener("click", function() {
@@ -61,15 +74,32 @@ arrleft.addEventListener("click", function() {
 
 arright.addEventListener("click", function() {
 
-    console.log(list.style.marginLeft);
+    carouselContainer.style.width = "380px";
+    console.log(carouselContainerWidth);
+    console.log(carouselItemWidth);
+
+    if (carouselContainerWidth >= '380') {
+        for (let item of carouselItems) {
+            item.style.width = (carouselContainerWidth / 2) + "px";
+        }
+        count = 1;
+        space = 20;
+        position -= (carouselItemWidth * count) + space;
+        list.style.marginLeft = position + "px";
+    }
+
+
+/*     console.log(list.style.marginLeft);
 
     position -= (width * count) + space;
 
-    list.style.marginLeft = position + "px";
+    list.style.marginLeft = position + "px"; */
+
 
     arrleft.style.visibility = "visible";
 
-    
+
+
     /* Check and On/Off buttons */
 
     if (list.style.marginLeft <= '-1707') {
@@ -95,12 +125,8 @@ cancelButton.addEventListener('click', function() {
     upscaleCover.style.visibility = "hidden";
 })
 
-/* secondItem.addEventListener('click', function() {
-    upscaleCover.style.visibility = "visible";
-}) */
 
-
-/* Item event target */
+/* Item event target (For GIF's) */
 
 list.onclick = function(event) {
 
@@ -127,8 +153,6 @@ list.onclick = function(event) {
     }
 
 }
-
-/* New Carousel */
 
 
 
