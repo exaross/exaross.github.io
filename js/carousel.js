@@ -33,7 +33,7 @@ let arright = document.getElementById('arrow-right');
 let list = document.getElementById('carousel__list');
 
 list.style.marginLeft = "0";
-list.style.transform = 'translateX(100px)';
+/* list.style.transform = 'translateX(100px)'; */
 console.log(list.style.marginLeft);
 
 arrleft.addEventListener("click", function() {
