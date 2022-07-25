@@ -7,11 +7,9 @@
 
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" href="styles/cr.css">
+    <link rel="stylesheet" type="text/css" href="styles/cr.css">
 
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/cr.js"></script>
 
     <title>Works for OOK</title>
 
@@ -35,13 +33,13 @@
                 </nav>
             </header>
 
-            <main class="main main-ook">
+            <main class="main-ook">
 
                 <section class="video">  
                     <h2 class="video__heading">
                         Video:
                     </h2>
-                        <video width="90%" src="/video/OOK.mp4" type="video/mp4" controls poster="/img/ook/Preview.png"></video> 
+                        <video width="80%" src="/video/OOK.mp4" type="video/mp4" controls poster="/img/ook/Preview.png"></video> 
                             <div>
                                 <a class="video__link" target="_blank" href="https://bit.ly/OOK_YT">
                                 Watch on YouTube
@@ -54,41 +52,83 @@
                         Images and GIF's:
                     </h2>
 
-                    <div class="carousel__container">
-                        <div class="carousel__arrow arrow-left" id="arrow-left"></div>
-                        <div class="carousel__arrow arrow-right" id="arrow-right"></div>
-                        <ul class="carousel__list" id="carousel__list">
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Chinese_New_Year.png" alt="Chinese New Year" class="carousel__image">
+                    <div id="upscale__cover">
+                        <div id="upscale__images">
+                            <img src="/img/cs/jenickseart.jpg" alt="carousel upscaled image" class="upscale__image" id="upscale__image">
+                            <img src="/img/icons/cancel.png" alt="upscale icon" class="upscale__icon" id="upscale__icon">
+                        </div>
+                    </div>
+
+                    <div class="cr-box">
+                        <button class="cr-button button-left"></button>
+                        <ul class="cr-list" id="cr-list">
+                            <li class="cr-element">
+                                <img src="/img/ook/Chinese_New_Year.png" alt="Chinese New Year" class="cr-image">
                             </li>
-                            <li class="carousel__item" id="second-item">
-                                <img src="/img0/ook/Good_morning.png" alt="jenickse art" class="carousel__image">
+                            <li class="cr-element" id="second-item">
+                                <img src="/img/ook/Good_morning.png" alt="jenickse art" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Chocolate_Day.png" alt="Chocolate Day" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Chocolate_Day.png" alt="Chocolate Day" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Coffee_Good_Morning.png" alt="Coffee Good Morning" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Coffee_Good_Morning.png" alt="Coffee Good Morning" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Rose.png" alt="Rose" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Rose.png" alt="Rose" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Groundhog.png" alt="Groundhog" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Groundhog.png" alt="Groundhog" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Rainy_Evening.png" alt="Rainy Evening" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Rainy_Evening.png" alt="Rainy Evening" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/Good_Night.png" alt="Good Night" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/Good_Night.png" alt="Good Night" class="cr-image">
                             </li>
-                            <li class="carousel__item">
-                                <img src="/img0/ook/TheOwl.png" alt="The Owl" class="carousel__image">
+                            <li class="cr-element">
+                                <img src="/img/ook/TheOwl.png" alt="The Owl" class="cr-image">
                             </li>
                         </ul>
+                        <button class="cr-button button-right"></button>
                     </div>
 
                 </section>
+                
+
+                <!-- <div class="carousel__container">
+                    <div class="carousel__button button-left" id="button-left"></div>
+                    <div class="carousel__button button-right" id="button-right"></div>
+                    <ul class="carousel__list" id="carousel__list">
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Chinese_New_Year.png" alt="Chinese New Year" class="carousel__image">
+                        </li>
+                        <li class="carousel__item" id="second-item">
+                            <img src="/img0/ook/Good_morning.png" alt="jenickse art" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Chocolate_Day.png" alt="Chocolate Day" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Coffee_Good_Morning.png" alt="Coffee Good Morning" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Rose.png" alt="Rose" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Groundhog.png" alt="Groundhog" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Rainy_Evening.png" alt="Rainy Evening" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/Good_Night.png" alt="Good Night" class="carousel__image">
+                        </li>
+                        <li class="carousel__item">
+                            <img src="/img0/ook/TheOwl.png" alt="The Owl" class="carousel__image">
+                        </li>
+                    </ul>
+                </div> -->
 
 
                 <!-- <section class="images">
@@ -152,6 +192,8 @@
         </footer>
 
     </div>
+
+    <script src="js/cr.js"></script>
     
 </body>
 </html>
