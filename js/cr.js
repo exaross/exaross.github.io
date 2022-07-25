@@ -16,11 +16,12 @@ let leftButton = document.querySelector('.button-left');
 let rightButton = document.querySelector('.button-right');
 let position = 0;
 let count = 3;
-let elementMargin = boxWidth * 0.02;
+let elementMargin = boxWidth * 0.01;
 /* let checkValue = ((listWidth / 2) * (-1)) + "px"; */
 
 for (let element of elements) {
-    element.style.width = (boxWidth / count) + "px";
+    let elm = element.style.width = (boxWidth / count) + "px";
+    console.log("element style width: " + elm);
     element.style.height = (boxHeight / 1.4) + "px";
     element.style.margin = elementMargin + "px";
 }
@@ -29,12 +30,12 @@ rightButton.addEventListener('click', function() {
     console.log('it works');
     let element = document.querySelector('.cr-element');
     let elementWidth = element.offsetWidth;
+    console.log("elementWidth: " + elementWidth);
         position -= elementWidth + (elementMargin * 2);
         list.style.marginLeft = position + "px";
         console.log("Margin Left: " + list.style.marginLeft);
 
         leftButton.style.visibility = "visible";
-
 
         let checkValue = (3198 * (-1)) + "px";
         console.log(checkValue);

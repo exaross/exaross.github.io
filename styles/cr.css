@@ -36,6 +36,7 @@ html {
     width: 480rem;
     margin: 0;
     padding: 0;
+    transition: all .4s ease-in-out;
 }
 
 .cr-element {
