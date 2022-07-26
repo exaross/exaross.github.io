@@ -9,6 +9,7 @@ let listWidth = list.offsetWidth;
 let elements = document.querySelectorAll('.cr-element');
 let element = document.querySelector('.cr-element');
 let elementWidth = element.offsetWidth;
+let elementMargin = boxWidth * 0.01;
 
 /* Buttons */
 
@@ -16,19 +17,23 @@ let leftButton = document.querySelector('.button-left');
 let rightButton = document.querySelector('.button-right');
 let position = 0;
 let count = 3;
-let elementMargin = boxWidth * 0.01;
 /* let checkValue = ((listWidth / 2) * (-1)) + "px"; */
 
 for (let element of elements) {
-    let elm = element.style.width = (boxWidth / count) + "px";
-    console.log("element style width: " + elm);
+    element.style.width = (boxWidth / count) + "px";
     element.style.height = (boxHeight / 1.4) + "px";
     element.style.margin = elementMargin + "px";
 }
 
 rightButton.addEventListener('click', function() {
     console.log('it works');
-    let element = document.querySelector('.cr-element');
+
+    for (let element of elements) {
+        element.style.width = (boxWidth / count) + "px";
+        element.style.height = (boxHeight / 1.4) + "px";
+        element.style.margin = elementMargin + "px";
+    }
+
     let elementWidth = element.offsetWidth;
     console.log("elementWidth: " + elementWidth);
         position -= elementWidth + (elementMargin * 2);
@@ -37,9 +42,11 @@ rightButton.addEventListener('click', function() {
 
         leftButton.style.visibility = "visible";
 
-        let checkValue = (3198 * (-1)) + "px";
-        console.log(checkValue);
-        if (list.style.marginLeft == checkValue) {
+/*         let checkValue = (3198 * (-1)) + "px"; */
+        let checkValue = ((elementWidth + elementMargin) * 6) * (-1);
+        console.log("Check value:" + checkValue);
+        console.log("Position:" + position);
+        if (position <= checkValue) {
         rightButton.style.visibility = "hidden";
         }
 
@@ -48,7 +55,13 @@ rightButton.addEventListener('click', function() {
 leftButton.addEventListener('click', function() {
 
     console.log('it works');
-    let element = document.querySelector('.cr-element');
+
+    for (let element of elements) {
+        element.style.width = (boxWidth / count) + "px";
+        element.style.height = (boxHeight / 1.4) + "px";
+        element.style.margin = elementMargin + "px";
+    }
+
     let elementWidth = element.offsetWidth;
         position += elementWidth + (elementMargin * 2);
         list.style.marginLeft = position + "px";
@@ -56,9 +69,10 @@ leftButton.addEventListener('click', function() {
 
         rightButton.style.visibility = "visible";
 
-        let checkValue = 0 + "px";
-        console.log(checkValue);
-        if (list.style.marginLeft == checkValue) {
+        let checkValue = 0;
+        console.log("Check value:" + checkValue);
+        console.log("Position:" + position);
+        if (position == checkValue) {
         leftButton.style.visibility = "hidden";
         }
 
@@ -97,7 +111,6 @@ list.onclick = function(event) {
         }
 
         upscaleCover.style.visibility = "visible";
-        console.log(value);
     }
 }
 
