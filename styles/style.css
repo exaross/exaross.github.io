@@ -89,6 +89,13 @@ a {
 
 .header-nav__list {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav__item {
     margin: 0;
     padding: 0;
 }
@@ -99,7 +106,7 @@ a {
 
 .header-nav__link {
     font-family: 'alataregular', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
@@ -122,6 +129,10 @@ a {
 
 .header-nav__link:hover::after {
     width: 100%;
+}
+
+.header-nav__logo {
+    font-size: 1.8rem;
 }
 
 .active {
@@ -418,7 +429,7 @@ a {
 .arts__link {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    transition: border .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .arts__overlay {
@@ -869,8 +880,14 @@ a {
         font-size: .5rem;
     }
 
-    .header-nav__link, .header-nav__logo {
-        font-size: 1rem;
+    .header-nav__logo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .header-nav__link:not(:last-child) {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
     }
 
     /* Menu */
@@ -984,8 +1001,8 @@ a {
     /* Homepage */
 
     .info {
-        width: 30rem;
-        height: 30rem;
+        width: 25rem;
+        height: 25rem;
     }
 
     .info__circle {
@@ -994,7 +1011,7 @@ a {
     }
 
     .info__img {
-        width: 14rem;
+        width: 12rem;
     }
 
     .info__paragraph:nth-child(1) {
@@ -1005,8 +1022,17 @@ a {
         font-size: .4rem;
     }
 
-    .header-nav__link, .header-nav__logo {
-        font-size: 1rem;
+    .header-nav__logo {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .header-nav__item:not(:last-child) {
+        margin-bottom: .5rem;
+    }
+
+    .header-nav__link {
+        font-size: 1.5rem;
     }
 
     /* Menu */
@@ -1107,8 +1133,12 @@ a {
             font-size: .8rem;
         }
     
-        .header-nav__link, .header-nav__logo {
-            font-size: 1rem;
+        .header-nav__link {
+            font-size: 1.2rem;
+        }
+
+        .header-nav__logo {
+            font-size: 1.4rem;
         }
 
         /* Menu */
@@ -1161,17 +1191,17 @@ a {
             /* Info */
 
             .info {
-                width: 45rem;
-                height: 45rem;
+                width: 55rem;
+                height: 55rem;
             }
         
             .info__circle {
-                width: 40rem;
-                height: 40rem;
+                width: 55rem;
+                height: 55rem;
             }
         
             .info__img {
-                width: 20rem;
+                width: 30rem;
             }
         
             .info__paragraph:nth-child(1) {
@@ -1182,8 +1212,12 @@ a {
                 font-size: .7rem;
             }
         
-            .header-nav__link, .header-nav__logo {
-                font-size: 1rem;
+            .header-nav__link {
+                font-size: 1.4rem;
+            }
+    
+            .header-nav__logo {
+                font-size: 1.6rem;
             }
 
             /* Menu */
