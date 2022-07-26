@@ -17,7 +17,6 @@ let leftButton = document.querySelector('.button-left');
 let rightButton = document.querySelector('.button-right');
 let position = 0;
 let count = 3;
-/* let checkValue = ((listWidth / 2) * (-1)) + "px"; */
 
 for (let element of elements) {
     element.style.width = (boxWidth / count) + "px";
@@ -26,7 +25,6 @@ for (let element of elements) {
 }
 
 rightButton.addEventListener('click', function() {
-    console.log('it works');
 
     for (let element of elements) {
         element.style.width = (boxWidth / count) + "px";
@@ -35,26 +33,18 @@ rightButton.addEventListener('click', function() {
     }
 
     let elementWidth = element.offsetWidth;
-    console.log("elementWidth: " + elementWidth);
         position -= elementWidth + (elementMargin * 2);
         list.style.marginLeft = position + "px";
-        console.log("Margin Left: " + list.style.marginLeft);
 
         leftButton.style.visibility = "visible";
 
-/*         let checkValue = (3198 * (-1)) + "px"; */
         let checkValue = ((elementWidth + elementMargin) * 6) * (-1);
-        console.log("Check value:" + checkValue);
-        console.log("Position:" + position);
         if (position <= checkValue) {
         rightButton.style.visibility = "hidden";
         }
-
 })
 
 leftButton.addEventListener('click', function() {
-
-    console.log('it works');
 
     for (let element of elements) {
         element.style.width = (boxWidth / count) + "px";
@@ -65,13 +55,10 @@ leftButton.addEventListener('click', function() {
     let elementWidth = element.offsetWidth;
         position += elementWidth + (elementMargin * 2);
         list.style.marginLeft = position + "px";
-        console.log("Margin Left: " + list.style.marginLeft);
 
         rightButton.style.visibility = "visible";
 
         let checkValue = 0;
-        console.log("Check value:" + checkValue);
-        console.log("Position:" + position);
         if (position == checkValue) {
         leftButton.style.visibility = "hidden";
         }
@@ -99,17 +86,13 @@ list.onclick = function(event) {
     if (!item) return;
     else {
 
-        console.log('0');
         let path = item.src;
-        console.log(path);
-
         if (path.includes('png')){
             let newpath = path.replace('png','gif');
             upscaleImage.src = newpath;
         } else {
             upscaleImage.src = path;
         }
-
         upscaleCover.style.visibility = "visible";
     }
 }
