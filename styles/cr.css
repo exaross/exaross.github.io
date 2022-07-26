@@ -1,12 +1,3 @@
-html {
-    font-size: 10px;
-    background-color: black;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 .cr-container {
     position: relative;
     width: 100vw;
