@@ -1,7 +1,6 @@
 
 /* New Carousel */
 
-<<<<<<< HEAD
 let buttonleft = document.getElementById('button-left');
 let buttonight = document.getElementById('button-right');
 let list = document.getElementById('carousel__list');
@@ -28,33 +27,6 @@ for (let item of items) {
 }
 
 list.style.marginLeft = "0";
-=======
-
-let arrleft = document.getElementById('arrow-left');
-let arright = document.getElementById('arrow-right');
-let list = document.getElementById('carousel__list');
-
-
-/* Variables for Adaptive */
-
-let carouselContainer = document.querySelector('.carousel__container');
-let carouselContainerWidth = carouselContainer.offsetWidth;
-let carouselContainerHeight = carouselContainer.offsetHeight;
-let carouselItem = document.querySelector('.carousel__item');
-let carouselItemWidth = carouselItem.offsetWidth;
-let carouselItemHeight = carouselItem.offsetHeight;
-let carouselItems = document.querySelectorAll('.carousel__item');
-
-let width = carouselItemWidth;
-let count = 3;
-let space = 207;
-let position = 0;
-
-
-
-list.style.marginLeft = "0";
-/* list.style.transform = 'translateX(100px)'; */
->>>>>>> a32aa9c190ccfeb25b069fceb64b23ea33260548
 console.log(list.style.marginLeft);
 
 buttonleft.addEventListener("click", function() {
@@ -64,44 +36,6 @@ buttonleft.addEventListener("click", function() {
 
 buttonight.addEventListener("click", function() {
 
-<<<<<<< HEAD
-=======
-    carouselContainer.style.width = "380px";
-    console.log(carouselContainerWidth);
-    console.log(carouselItemWidth);
-
-    if (carouselContainerWidth >= '380') {
-        for (let item of carouselItems) {
-            item.style.width = (carouselContainerWidth / 2) + "px";
-        }
-        count = 1;
-        space = 20;
-        position -= (carouselItemWidth * count) + space;
-        list.style.marginLeft = position + "px";
-    }
-
-
-/*     console.log(list.style.marginLeft);
-
-    position -= (width * count) + space;
-
-    list.style.marginLeft = position + "px"; */
-
-
-    arrleft.style.visibility = "visible";
-
-
-
-    /* Check and On/Off buttons */
-
-    if (list.style.marginLeft <= '-1707') {
-        arrleft.style.visibility = "visible";
-    }
-
-    if (list.style.marginLeft >= '-3400') {
-        arright.style.visibility = "hidden";
-    }
->>>>>>> a32aa9c190ccfeb25b069fceb64b23ea33260548
 
 })
 
