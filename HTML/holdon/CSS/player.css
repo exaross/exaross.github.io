@@ -1,0 +1,215 @@
+/* Audio Player */
+
+:root {
+    --player_height: 5rem;
+}
+
+.audio-player {
+    display: grid;
+    grid-template-rows: .6rem auto;
+    width: 44rem;
+    height: var(--player_height);
+    background-color: #444;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0 .1rem 0 white;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    background-color: silver;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 0 .1rem 0 white;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Controls */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.controls > * {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-play.play {
+    position: relative;
+    left: 0;
+    height: 0;
+    width: 2rem;
+    border: .8rem solid transparent;
+    border-left: 1.6rem solid rgb(255, 255, 255, 1);
+    cursor: pointer;
+  }
+
+.toggle-play.pause {
+    position: relative;
+    width: 2.4rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.toggle-play.pause::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: .3rem;
+    background-color: white;
+}
+
+.toggle-play.pause::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 1.1rem;
+    height: 100%;
+    width: .3rem;
+    background-color: white;
+}
+
+.time {
+    display: flex;
+}
+
+.time > * {
+    padding: .2rem;
+}
+
+.volume-container {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.volume-button {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+
+.volume {
+    width: 3rem;
+    height: 3rem;
+    transform: scale(0.7);
+}
+
+.volume-slider {
+    position: absolute;
+    top: calc(50% - .7rem);
+    left: -0.3rem;
+    width: 0;
+    height: 1.5rem;
+    z-index: -1;
+    background-color: silver;
+    transition: 0.25s;
+    box-shadow: 0 0 .1rem 0 white;
+}
+
+.volume-percentage {
+    width: 75%;
+    height: 100%;
+    background-color: white;
+}
+
+.volume-muted {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+}
+
+.volume-container:hover .volume-slider {
+    left: -123px;
+    width: 120px;
+  }
+
+.icon-volumeMedium {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Images/icons/volume.png);
+  }
+
+  .icon-volumeMute {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../Images/icons/volume.png);
+    opacity: 0.7;
+  }
+
+  .time, .name {
+      font-size: 1.1rem;
+  }
+
+  /* Image Upscale */
+
+#track_cover {
+    cursor: pointer;
+}
+
+#track-upscale_cover {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .2);
+    z-index: 1000;
+}
+
+#track-upscale_images {
+    position: relative;
+    height: 92rem;
+    width: 90rem;
+    z-index: 1000;
+}
+
+.track-upscale_image {
+    height: 90rem;
+    width: 90rem;
+    margin: 1rem;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, .2);
+    z-index: 1000;
+}
+
+.track-upscale_icon {
+    position: absolute;
+    top: -.5rem;
+    right: -2rem;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity .2s ease-in-out;
+    z-index: 1000;
+}
+
+.track-upscale_icon:hover {
+    opacity: 1;
+}

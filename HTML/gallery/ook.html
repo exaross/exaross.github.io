@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="/HTML/gallery/css/style_ook.css">
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="icon" href="/Images/Icons/X.png">
+        <script src="js/jquery-3.6.0.js"></script>
+
+        <title>OOK Group</title>
+    </head>
+    <body>
+
+        <div id="page_container">
+            <div id="content_wrap">
+
+                <header id="header">
+                    <a href="/HTML/index.html" id="header_link" class="header_element">
+                        <img src="/images/Icons/X_Logo.png" alt="Logo" id="header_image">
+                    </a>
+                </header>
+
+                <main>
+
+                    <section class="section-video">  
+                        <h2 class="section-video_heading">
+                            Gallery for OOK:
+                        </h2>
+                            <div class="video_container">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4flLdiMPFEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <!-- <video width="68%" src="video/OOK.mp4" type="video/mp4" controls poster="/HTML/gallery/img/Preview.png"></video> 
+                                <div>
+                                    <a class="section-video-link" target="_blank" href="https://bit.ly/OOK_YT">
+                                    Watch on YouTube
+                                    </a>
+                                </div> -->
+                    </section>
+                    
+                    <section class="section-images">
+                        <h2 class="section-images-heading">
+                            Images and GIF's:
+                        </h2>
+                        <ul class="section-images-parent">
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="imgs/Spheres_Light.png">
+                                    <img class="section-images-image" src="imgs/Spheres_Light.png" alt="Spheres_Light">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Chinese_New_Year.gif">
+                                    <img class="section-images-image" src="animation/Chinese_New_Year.png" alt="Chinese_New_Year"> 
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Rose.gif">
+                                    <img class="section-images-image" src="animation/Rose.png" alt="Rose">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Chocolate_Day.gif">
+                                    <img class="section-images-image" src="animation/Chocolate_Day.png" alt="Chocolate_Day">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Coffee_Good_Morning.gif">
+                                    <img class="section-images-image" src="animation/Coffee_Good_Morning.png" alt="Coffee_Good_Morning">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Good_Night.gif">
+                                    <img class="section-images-image" src="animation/Good_Night.png" alt="Good_Night">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Groundhog.gif">
+                                    <img class="section-images-image" src="animation/Groundhog.png" alt="Groundhog">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="imgs/Logo_1.png">
+                                    <img class="section-images-image" src="imgs/Logo_1.png" alt="Logo_1">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Rainy_Evening.gif">
+                                    <img class="section-images-image" src="animation/Rainy_Evening.png" alt="Rainy_Evening">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="imgs/Logo_2.png">
+                                    <img class="section-images-image" src="imgs/Logo_2.png" alt="Logo_2">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/TheOwl.gif">
+                                    <img class="section-images-image" src="animation/TheOwl.png" alt="TheOwl">
+                                </a>
+                            </li>
+                            <li class="section-images-child">
+                                <a class="section-images-link" target="_blank" href="animation/Good_morning.gif">
+                                    <img class="section-images-image" src="animation/Good_morning.png" alt="Good_morning">
+                                </a>
+                            </li>
+                          </ul>
+                    </section>
+
+                </main>
+    
+                </div>
+
+                <footer id="footer">
+                    &copy 2023
+                 </footer>
+
+            </div>
+
+            <script>
+                $(".section-images-image").mouseover(function(){
+                    let path = this.src;
+                    if (path.includes('png')){
+                        let npath = path.replace('png','gif');
+                        this.src=npath;
+                    }
+                })
+                $(".section-images-image").mouseout(function(){
+                    let path = this.src;
+                    if (path.includes('gif')){
+                        let npath = path.replace('gif','png');
+                        this.src=npath;
+                    }
+                })
+            </script>
+
+    </body>
+</html>

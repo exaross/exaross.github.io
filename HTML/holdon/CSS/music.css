@@ -1,0 +1,73 @@
+/* Music  */
+/* Sort container */
+
+#music-sort_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .music-sort_heading {
+    margin-bottom: 0;
+  }
+  
+  #music-sort_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .music-sort_item:first-child {
+    margin-right: 2rem;
+  }
+  
+  /* Music Tracks */
+  
+  #music-tracks_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 70vh;
+    padding: 0;
+  }
+  
+  .music-tracks_row {
+    width: 100%;
+    height: 24%;
+  }
+  
+  .music-tracks_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .music-tracks_item {
+    width: 9%;
+    height: auto;
+    border: none;
+  }
+  
+  #music-tracks_button {
+    width: 20%;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  .trackLinkPage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .trackImage {
+    width: inherit;
+    height: inherit;
+  }

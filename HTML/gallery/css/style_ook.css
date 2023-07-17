@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;400&display=swap');
+
+body {
+    background-color: black;
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    background-color: var(--black);
+    border-bottom: .05rem solid rgba(255, 255, 255, 0.2);
+}
+
+.header-heading {
+    padding: 15px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.header-text-orange {
+    color: #f55415;
+}
+
+/* Section Video */ 
+
+.video_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90rem;
+    height: 60rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.section-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.section-video_heading {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.section-video-link {
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.section-video-link:hover {
+    color: white;
+}
+
+/* Section Images */
+
+.section-images {
+    
+}
+
+.section-images-heading {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+    padding: 5px;
+}
+
+.section-images-parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;    
+    padding: 0;
+    margin: 0;
+    margin-bottom: 150px;
+    list-style: none;
+  }
+
+.section-images-child {
+    padding: 10px;
+    width: 560px;
+    height: 310px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .section-images-link {
+      padding: 0;
+      margin: 0;
+  }
+
+.section-images-image {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.section-images-image:hover {
+    border: 1px solid white;
+}
+

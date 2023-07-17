@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/order.css">
+    <link rel="icon" href="../Images/icons/favicon.png">
+
+    <title>Order a bit</title>
+</head>
+
+<body>
+
+    <div id="page_container">
+
+        <div id="content_wrap">
+            <header id="header">
+                <nav id="nav">
+                    <a href="../HTML/index.html" id="nav_link">HOLD ON</a>
+                    <ul id="nav_list">
+                        <li class="nav_item">
+                            <a href="../HTML/music.html" class="nav_link">Music</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="../HTML/order.html" class="nav_link active_link">Order a Bit</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="../HTML/contacts.html" class="nav_link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="main">
+
+                <section id="logo-animation_container">
+                        <img src="../Video/HO_Logo_Animation_Once.gif" alt="HO_Animation" id="logo-animation_image">
+                </section>
+
+                <section id="order_container">
+                    <h2 class="order_heading">You can order a beat by filling out the form below.</h2>
+                    <form action="" id="order_form">
+                        <div class="form_block">
+                            <label for="Name">Name</label>
+                            <input type="text" name="Name" id="form_name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form_block">
+                            <label for="Email">Email</label>
+                            <input type="email" name="Email" id="form_email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form_block">
+                            <label for="beat_type">Beat type</label>
+                            <select name="beat_type" id="beat_type">
+                                <option value="none" selected disabled hidden>Select type of a beat</option>
+                                <option value="Rock">Rock backbeat</option>
+                                <option value="Boom">Boom bap</option>
+                                <option value="Techno">Techno beat</option>
+                                <option value="Deep house">Deep house</option>
+                                <option value="Trap">Trap</option>
+                            </select>
+                        </div>
+                        <div class="form_block">
+                            <label for="beat_length">Beat length</label>
+                            <select name="beat_length" id="form_length">
+                                <option value="none" selected disabled hidden>Select length of a beat</option>
+                                <option value="30">&#x2264; 30 seconds</option>
+                                <option value="30-60">30-60 seconds</option>
+                                <option value="60-120">1-2 minutes</option>
+                                <option value="120-180">2-3 minutes</option>
+                                <option value="120-180">&#8805; 3 minutes</option>
+                            </select>
+                        </div>
+                        <div class="form_block">
+                            <label for="Deadline">Deadline</label>
+                            <input type="date" name="Deadline" id="form_deadline">
+                        </div>
+                        <div class="form_block">
+                            <label for="beat_budget">Your budget</label>
+                            <input type="text" name="form_budget" id="beat_budget">
+                        </div>
+                        <div class="form_block">
+                            <textarea name="Description" id="form_description" cols="30" rows="10" noresize placeholder="Write a few words about how you view the perfect final result. Define main idea and describe some details."></textarea>
+                        </div>
+                        <input type="submit" value="Order" id="form_button" class="button">
+                    </form>
+                </section>
+            
+            </main>
+        </div>
+
+        <footer id="footer">
+            <p id="footer_paragraph">&#169 All rights reserved. 2023.</p>
+            <ul id="footer-socials_list">
+                <li class="footer-socials_item">
+                    <a href="" class="footer-socials_link">
+                        <img src="../Images/icons/spotify.png" alt="Spotify" class="footer-socials_image">
+                    </a>
+                </li>
+                <li class="footer-socials_item">
+                    <a href="" class="footer-socials_link">
+                        <img src="../Images/icons/youtube.png" alt="YouTube" class="footer-socials_image">
+                    </a>
+                </li>
+                <li class="footer-socials_item">
+                    <a href="" class="footer-socials_link">
+                        <img src="../Images/icons/soundcloud.png" alt="Soundcloud" class="footer-socials_image">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <script src="../JS/script.js"></script>
+    
+</body>
+</html>

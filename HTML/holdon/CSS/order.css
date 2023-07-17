@@ -1,0 +1,78 @@
+
+/* Order */
+
+/* Container */
+
+#order_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white)
+  }
+
+.order_heading {
+  margin-bottom: 2rem;
+}
+
+#logo-animation_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+#logo-animation_image {
+  width: 20rem;
+  height: 20rem;
+}
+
+  /* Form */
+
+#order_form {
+  border: .1rem solid var(--white);
+  padding: 1rem;
+  width: 40rem;
+}
+
+.form_block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#form_button {
+  width: 100%;
+}
+
+#form_description {
+  resize: none;
+}
+
+input, select, option {
+  width: 70%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  resize: vertical;
+  font-size: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem;
+  resize: vertical;
+  font-size: 1.5rem;
+}
+
+label {
+  width: 30%;
+  padding: 1.2rem 1.2rem 1.2rem 0;
+  display: inline-block;
+  font-size: 1.5rem;
+}
