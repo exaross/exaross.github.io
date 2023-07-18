@@ -9,7 +9,7 @@ const audioPlayer = document.querySelector(".audio-player");
 let pathPage = window.location.pathname;
 let trackNumber = pathPage.match(/\d+/);
 
-const audio = new Audio("/HTML/holdon/Audio/track_" + trackNumber + ".wav");
+const audio = new Audio("../../Audio/track_" + trackNumber + ".wav");
 
 console.dir(audio);
 
