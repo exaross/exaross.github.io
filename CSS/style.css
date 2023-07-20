@@ -43,6 +43,15 @@ a {
     border-bottom: .05rem solid var(--grey);
 }
 
+#header_homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    background-color: var(--black);
+    border-bottom: none;
+}
+
 .header_element {
     display: flex;
     justify-content: center;
