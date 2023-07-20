@@ -180,6 +180,7 @@ a {
 .about_heading {
     font-size: 2rem;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .about_heading:not(:first-child) {
