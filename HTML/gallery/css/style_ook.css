@@ -45,8 +45,8 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90rem;
-    height: 60rem;
+    width: 60vw;
+    height: 70vh;
     margin: 2rem 0 2rem 0;
 }
 
@@ -55,6 +55,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     margin-top: 4rem;
     text-align: center;
 }
@@ -110,10 +111,10 @@ html {
     margin-bottom: 40px;
   }
 
-  .section-images-link {
-      padding: 0;
-      margin: 0;
-  }
+.section-images-link {
+    padding: 0;
+    margin: 0;
+}
 
 .section-images-image {
     width: 100%;
@@ -127,5 +128,15 @@ html {
 
 .section-images-image:hover {
     border: 1px solid white;
+}
+
+/* Adaptive */
+
+@media only screen and (max-width: 600px) {
+
+    .video_container {
+        width: 90vw;
+    }
+
 }
 

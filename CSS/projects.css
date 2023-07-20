@@ -117,3 +117,26 @@
     text-transform: uppercase;
     font-size: 4rem;
 }
+
+/* Adaptive */
+/* Personal and Study Projects */
+
+@media only screen and (max-width: 600px) {
+    
+    .project_title {
+        bottom: 0rem;
+    }
+
+    .project_paragraph {
+        font-size: 2rem;
+    }
+
+}
+
+@media only screen and (min-width: 2160px) {
+
+    .project_paragraph {
+        font-size: 6rem;
+    }
+
+}
