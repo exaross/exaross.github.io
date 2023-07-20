@@ -1,7 +1,14 @@
 /* Music  */
 /* Sort container */
 
-#music-sort_container {
+  #main {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #music-sort_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +44,8 @@
   }
   
   .music-tracks_row {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 24%;
   }
@@ -45,6 +54,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0;
     width: 100%;
     height: 100%;
@@ -52,14 +62,26 @@
   
   .music-tracks_item {
     width: 9%;
-    height: auto;
+    height: 100%;
     border: none;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    filter: blur(2px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .music-tracks_item:hover {
+    opacity: 1;
+    filter: blur(0);
   }
   
   #music-tracks_button {
     width: 20%;
+    height: 10%;
     margin-top: 2rem;
     cursor: pointer;
+    font-size: 1rem
   }
 
   .trackLinkPage {
@@ -70,4 +92,26 @@
   .trackImage {
     width: inherit;
     height: inherit;
+  }
+
+  /* Adaptive */
+
+  /* Music */
+
+  @media only screen and (max-width: 600px) {
+
+    #music-tracks_container, #main {
+      height: 90%;
+    }
+
+    .music-tracks_item {
+      width: 19%;
+      height: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    .music-tracks_row {
+
+    }
+
   }

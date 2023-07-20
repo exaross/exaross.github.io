@@ -96,6 +96,7 @@ a {
 
 #pages_list {
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 .pages-list-item_link {
@@ -171,19 +172,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-#about_block {
+#about-block {
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.about_image {
-    height: 44rem;
-    width: 20rem;
-    margin-bottom: 2rem;
 }
 
 .about_heading {
@@ -282,11 +279,22 @@ a {
 /* Hold On */
 
 #main-hold {
-    height: 85vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.hold-block {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .hold_paragraph {
@@ -295,31 +303,31 @@ a {
     margin: 4rem 0 2rem 0;
 }
 
-.hold_images {
-    display: flex;
-    justify-content: space-between;
-}
-
 .hold_link {
     width: 100%;
-    border: 0.5px solid rgba(255, 255, 255, 0.4);
 }
 
 .hold_image {
-    height: 30rem;
-    width: 100%;
+    width: 40%;
     opacity: 0.5;
     transition: opacity 0.4s ease-in-out;
+    border: 0.1rem solid var(--silver);
 }
 
 .hold_image:hover {
     opacity: 1;
 }
 
+.hold-logo_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .hold-logo_gif {
-    width: 20rem;
-    height: 20rem;
-    margin-bottom: 4rem;
+    width: 10%;
+    height: 10%;
+    margin-bottom: 2rem;
 }
 
 .hold_span {
@@ -342,3 +350,44 @@ a {
 .hold-visit_link:hover {
     background-color: var(--white);
 }
+
+/* Adaptive */
+
+/* Homepage */
+
+@media only screen and (min-width: 2160px) {
+    #main-avatar_image {
+        height: 80rem;
+    }
+}
+
+/* About */
+
+@media only screen and (max-width: 600px) {
+    #main-about {
+        height: 80% ;
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+/* Hold */
+
+@media only screen and (max-width: 1100px) {
+    #main-hold {
+        height: 80% ;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hold-logo_gif {
+        width: 25%;
+        height: 25%;
+    }
+
+    .hold_image {
+        width: 60%;
+    }
+}
+
+
+
+

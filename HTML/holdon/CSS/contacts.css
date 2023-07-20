@@ -6,6 +6,12 @@
     align-items: center;
     flex-direction: column;
     color: var(--white);
+    height: 90%;
+    margin: 2rem 0 2rem 0;
+  }
+
+  #main-contacts {
+    height: 85vh;
   }
   
   #contacts_avatar {
@@ -48,4 +54,12 @@
   .contacts-contacts_socials {
     display: flex;
     justify-content: space-between;
+  }
+
+  /* Adaptive */
+
+  @media only screen and (max-width: 640px) {
+    #main-contacts {
+      height: 90%;
+    }
   }
