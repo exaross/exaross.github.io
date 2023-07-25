@@ -357,11 +357,11 @@ a {
 
 /* Homepage */
 
-@media only screen and (min-width: 2160px) {
+/* @media only screen and (min-width: 2160px) {
     #main-avatar_image {
         height: 80rem;
     }
-}
+} */
 
 /* About */
 
