@@ -241,7 +241,14 @@ a {
     text-transform: uppercase;
 }
 
-.about_paragraph, .about_link {
+.about_paragraph {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.about_link {
     color: var(--white);
     font-size: 2.2rem;
     margin-bottom: .5rem;
